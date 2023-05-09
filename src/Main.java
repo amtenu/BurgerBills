@@ -10,5 +10,12 @@ public class Main {
         fries.printItem();
         fries.setSize("Medium");
         fries.printItem();
+
+        Burger burger=new Burger("regular",4.00);
+        burger.addTopping("Bacon","fries","");
+        burger.printItem();
     }
+
+
+
 }
