@@ -12,7 +12,7 @@ public class Burger extends Item {
 
     @Override
     public String getName() {
-        return super.getName() +" "+ "BURGER";
+        return super.getName() + " " + "BURGER";
     }
 
     @Override
@@ -23,31 +23,30 @@ public class Burger extends Item {
                 ((extra3 == null) ? 0 : extra3.getAdjustedPrice());
     }
 
-    public double getExtraPrice(String toppingName){
-        return switch(toppingName.toUpperCase()){
-            case "AVOCADO","CHEESE"->1.0;
-            case "BACON","HAM" -> 1.5;
-            case "FRIES" ->2;
+    public double getExtraPrice(String toppingName) {
+        return switch (toppingName.toUpperCase()) {
+            case "AVOCADO", "CHEESE" -> 1.0;
+            case "BACON", "HAM" -> 1.5;
             default -> 0.0;
         };
     }
 
-    public void addTopping(String extra1,String extra2,String extra3){
-        this.extra1=new Item("TOPPING","extra1",getExtraPrice(extra1));
-        this.extra2=new Item("TOPPING","extra1",getExtraPrice(extra2));
-        this.extra3=new Item("TOPPING","extra1",getExtraPrice(extra3));
+    public void addTopping(String extra1, String extra2, String extra3) {
+        this.extra1 = new Item("TOPPING",extra1, getExtraPrice(extra1));
+        this.extra2 = new Item("TOPPING", extra2, getExtraPrice(extra2));
+        this.extra3 = new Item("TOPPING", extra3, getExtraPrice(extra3));
     }
 
 
-    public void printItemizedList(){
-        printItem("BASE BURGER",getBasePrice());
-        if(extra1 != null){
+    public void printItemizedList() {
+        printItem("BASE BURGER", getBasePrice());
+        if (extra1 != null) {
             extra1.printItem();
         }
-        if(extra2 != null){
+        if (extra2 != null) {
             extra2.printItem();
         }
-        if(extra3 != null){
+        if (extra3 != null) {
             extra3.printItem();
         }
 
