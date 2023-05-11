@@ -19,11 +19,16 @@ public class Main {
 //        burger.addTopping("Bacon","Ham","MAYO");
 //        burger.printItem();
 
-        MealOrder regularMeal=new MealOrder();
+//        MealOrder regularMeal=new MealOrder();
+////        regularMeal.printItemizedList();
+//        regularMeal.addBurgetToppings("BACON","BACON","");
+//        regularMeal.setDrinkSize("Large");
 //        regularMeal.printItemizedList();
-        regularMeal.addBurgetToppings("BACON","BACON","");
-        regularMeal.setDrinkSize("Large");
-        regularMeal.printItemizedList();
+
+     MealOrder specialMeal=new MealOrder("special","Fanta","Cheese");
+     specialMeal.addBurgerToppings("Avocado","Bacon","Mayo","Ham","Cheese");
+     specialMeal.setDrinkSize("Small");
+     specialMeal.printItemizedList();
 
 
 
